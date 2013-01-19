@@ -48,6 +48,8 @@ require path('sys').'bundle'.EXT;
 require path('sys').'config'.EXT;
 require path('sys').'helpers'.EXT;
 require path('sys').'autoloader'.EXT;
+require path('sys').'LaravelRequest'.EXT;
+require path('sys').'LaravelResponse'.EXT;
 
 /*
 |--------------------------------------------------------------------------
@@ -152,9 +154,9 @@ if (magic_quotes())
 |
 */
 
-use Symfony\Component\HttpFoundation\LaravelRequest as RequestFoundation;
+#use Symfony\Component\HttpFoundation\LaravelRequest as RequestFoundation;
 
-Request::$foundation = RequestFoundation::createFromGlobals();
+Request::$foundation = LaravelRequest::createFromGlobals();
 
 /*
 |--------------------------------------------------------------------------
