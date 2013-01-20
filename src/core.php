@@ -50,6 +50,8 @@ require path('sys').'helpers'.EXT;
 require path('sys').'autoloader'.EXT;
 require path('sys').'LaravelRequest'.EXT;
 require path('sys').'LaravelResponse'.EXT;
+require path('sys').'mail'.DS.'bootstrap'.EXT;
+
 
 /*
 |--------------------------------------------------------------------------
