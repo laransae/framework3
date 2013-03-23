@@ -16,6 +16,8 @@ define('CRLF', "\r\n");
 define('BLADE_EXT', '.blade.php');
 define('DEFAULT_BUNDLE', 'application');
 define('MB_STRING', (int) function_exists('mb_get_info'));
+require path('sys').'LaravelRequest'.EXT;
+require path('sys').'LaravelResponse'.EXT;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +50,7 @@ require path('sys').'bundle'.EXT;
 require path('sys').'config'.EXT;
 require path('sys').'helpers'.EXT;
 require path('sys').'autoloader'.EXT;
+require path('sys').'mail'.DS.'bootstrap'.EXT;
 
 /*
 |--------------------------------------------------------------------------
@@ -114,10 +117,10 @@ Autoloader::map(array(
 */
 
 Autoloader::namespaces(array(
-	'Symfony\Component\Console' 
-                    => path('sys').'vendor/Symfony/Component/Console',
+	'Symfony\Component\Console'
+                    => path('sys').'vendor/symfony/console/Symfony/Component/Console',
 	'Symfony\Component\HttpFoundation'
-                    => path('sys').'vendor/Symfony/Component/HttpFoundation',
+                    => path('sys').'vendor/symfony/http-foundation/Symfony/Component/HttpFoundation',
 ));
 
 /*
