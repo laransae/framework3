@@ -1,6 +1,4 @@
-<?php namespace Laravel;
-
-use Symfony\Component\HttpFoundation\Response;
+<?php namespace Symfony\Component\HttpFoundation;
 
 /**
  * Response represents an HTTP response.

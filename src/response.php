@@ -1,7 +1,7 @@
 <?php namespace Laravel;
 
 use Symfony\Component\HttpFoundation\ResponseHeaderBag;
-#use Laravel\LaravelResponse as FoundationResponse;
+use Symfony\Component\HttpFoundation\LaravelResponse as FoundationResponse;
 
 class Response {
 
@@ -31,7 +31,7 @@ class Response {
 	{
 		$this->content = $content;
 
-		$this->foundation = new LaravelResponse('', $status, $headers);
+		$this->foundation = new FoundationResponse('', $status, $headers);
 	}
 
 	/**

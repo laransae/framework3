@@ -15,19 +15,9 @@ if(! IoC::registered('task: migrate'))
 		$resolver = new Tasks\Migrate\Resolver($database);
 
 		return new Tasks\Migrate\Migrator($resolver, $database);
-	});
+	});	
 }
 
-/**
- * The db task is responsible for seeding database data.
- */
-if(! IoC::registered('task: db'))
-{
-	IoC::singleton('task: db', function()
-	{
-		return new Tasks\Seeder;
-	});
-}
 
 /**
  * The bundle task is responsible for the installation of bundles
@@ -138,7 +128,7 @@ if(! IoC::registered('bundle.provider: github'))
 }
 
 /**
- * The "help" task provides information about
+ * The "help" task provides information about 
  * artisan usage.
  */
 if(! IoC::registered('task: help'))

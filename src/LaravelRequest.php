@@ -1,6 +1,4 @@
-<?php namespace Laravel;
-
-use Symfony\Component\HttpFoundation\Request;
+<?php namespace Symfony\Component\HttpFoundation;
 
 class LaravelRequest extends Request {
 

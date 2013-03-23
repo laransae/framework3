@@ -48,10 +48,6 @@ require path('sys').'bundle'.EXT;
 require path('sys').'config'.EXT;
 require path('sys').'helpers'.EXT;
 require path('sys').'autoloader'.EXT;
-require path('sys').'LaravelRequest'.EXT;
-require path('sys').'LaravelResponse'.EXT;
-require path('sys').'mail'.DS.'bootstrap'.EXT;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -93,15 +89,15 @@ Autoloader::namespaces(array('Laravel' => path('sys')));
 */
 
 Autoloader::map(array(
-	'Laravel\\Database\\Eloquent\\Relationships\\Belongs_To'
+	'Laravel\\Database\\Eloquent\\Relationships\\Belongs_To' 
                     => path('sys').'database/eloquent/relationships/belongs_to'.EXT,
-	'Laravel\\Database\\Eloquent\\Relationships\\Has_Many'
+	'Laravel\\Database\\Eloquent\\Relationships\\Has_Many' 
                     => path('sys').'database/eloquent/relationships/has_many'.EXT,
-	'Laravel\\Database\\Eloquent\\Relationships\\Has_Many_And_Belongs_To'
+	'Laravel\\Database\\Eloquent\\Relationships\\Has_Many_And_Belongs_To' 
                     => path('sys').'database/eloquent/relationships/has_many_and_belongs_to'.EXT,
-	'Laravel\\Database\\Eloquent\\Relationships\\Has_One'
+	'Laravel\\Database\\Eloquent\\Relationships\\Has_One' 
                     => path('sys').'database/eloquent/relationships/has_one'.EXT,
-	'Laravel\\Database\\Eloquent\\Relationships\\Has_One_Or_Many'
+	'Laravel\\Database\\Eloquent\\Relationships\\Has_One_Or_Many' 
                     => path('sys').'database/eloquent/relationships/has_one_or_many'.EXT,
 ));
 
@@ -118,10 +114,10 @@ Autoloader::map(array(
 */
 
 Autoloader::namespaces(array(
-	'Symfony\Component\Console'
-                    => path('sys').'vendor/symfony/console/Symfony/Component/Console',
+	'Symfony\Component\Console' 
+                    => path('sys').'vendor/Symfony/Component/Console',
 	'Symfony\Component\HttpFoundation'
-                    => path('sys').'vendor/symfony/http-foundation/Symfony/Component/HttpFoundation',
+                    => path('sys').'vendor/Symfony/Component/HttpFoundation',
 ));
 
 /*
@@ -156,9 +152,9 @@ if (magic_quotes())
 |
 */
 
-#use Symfony\Component\HttpFoundation\LaravelRequest as RequestFoundation;
+use Symfony\Component\HttpFoundation\LaravelRequest as RequestFoundation;
 
-Request::$foundation = LaravelRequest::createFromGlobals();
+Request::$foundation = RequestFoundation::createFromGlobals();
 
 /*
 |--------------------------------------------------------------------------
